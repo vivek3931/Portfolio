@@ -6,41 +6,102 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Services</title>
     <link rel="stylesheet" href="service.css">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap"
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap"
         rel="stylesheet">
 </head>
 
 <body>
+
+    <!-- NAV-BAR -->
+
+    <nav>
+        <div class="nav">
+            <div class="navlogo">
+                <img src="./img/VIVEK_LOGO.png" alt="VIVEK_LOGO">
+            </div>
+
+            <div class="navcontent">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a class="active" href="service.html">Services</a></li>
+                    <li><a href="project.html">Projects</a></li>
+                    <li><a href="contact.html">Contact me</a></li>
+                </ul>
+            </div>
+            <div class="datetime">
+                <span class="date"></span>
+                <span class="time"></span>
+            </div>
+            <div id="menu-bar" class="menu-bar">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+    <nav>
+        <div class="side-nav hidden">
+            <div class="side-navlogo">
+                <div class="img">
+                    <img src="./img/VIVEK_LOGO.png" alt="VIVEK_LOGO">
+                </div>
+                <div class="menu-bar">
+                    <i class="fa-solid fa-xmark"></i>
+                </div>
+            </div>
+            <div class="side-navcontent">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a class="active" href="service.html">Services</a></li>
+                    <li><a href="project.html">Projects</a></li>
+                    <li><a href="contact.html">Contact me</a></li>
+                </ul>
+            </div>
+    </nav>
+
+    <!-- SERVICE PAGE -->
+
     <div class="services-container">
         <h1>My Services</h1>
         <div class="services">
-            <div class="service">
+            <div class="service" data-aos="zoom-in-right">
                 <i class="fas fa-code"></i>
                 <h2>Web Development</h2>
                 <p>I create responsive and dynamic websites using the latest technologies like HTML, CSS, JavaScript,
                     and frameworks such as React and Angular.</p>
             </div>
-            <div class="service">
+            <div class="service" data-aos="zoom-in-left">
                 <i class="fas fa-paint-brush"></i>
-                <h2>UI/UX Design</h2>
+                <h2>Web Design</h2>
                 <p>I design user-friendly interfaces and experiences that are both visually appealing and easy to
                     navigate, ensuring a seamless user experience.</p>
             </div>
-            <div class="service">
+            <div class="service" data-aos="zoom-in-right">
                 <i class="fas fa-server"></i>
                 <h2>Backend Development</h2>
                 <p>I develop robust backend systems using Node.js, Express, and MongoDB, ensuring your applications are
                     scalable and efficient.</p>
             </div>
-            <div class="service">
+            <div class="service" data-aos="zoom-in-left">
                 <i class="fas fa-mobile-alt"></i>
-                <h2>Mobile App Development</h2>
-                <p>I build cross-platform mobile applications using React Native, providing a consistent experience
+                <h2>Mobile Responsive</h2>
+                <p>Create websites that look great on all devices, from smartphones to tablets and desktops, providing a
+                    consistent experience
                     across both iOS and Android devices.</p>
             </div>
         </div>
     </div>
+    <script src="script.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            offset: 100,
+            duration: 1000
+        });
+    </script>
 </body>
 
 </html>

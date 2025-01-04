@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects</title>
+    <link rel="stylesheet" href="project.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- NAV-BAR -->
+
+    <nav>
+        <div class="nav">
+            <div class="navlogo">
+                <img src="./img/VIVEK_LOGO.png" alt="VIVEK_LOGO">
+            </div>
+
+            <div class="navcontent">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="service.html">Services</a></li>
+                    <li><a class="active" href="project.html">Projects</a></li>
+                    <li><a href="contact.html">Contact me</a></li>
+                </ul>
+            </div>
+            <div class="datetime">
+                <span class="date"></span>
+                <span class="time"></span>
+            </div>
+            <div id="menu-bar" class="menu-bar">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+    <nav>
+        <div class="side-nav hidden">
+            <div class="side-navlogo">
+                <div class="img">
+                    <img src="./img/VIVEK_LOGO.png" alt="VIVEK_LOGO">
+                </div>
+                <div class="menu-bar">
+                    <i class="fa-solid fa-xmark"></i>
+                </div>
+            </div>
+            <div class="side-navcontent">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="service.html">Services</a></li>
+                    <li><a class="active" href="project.html">Projects</a></li>
+                    <li><a href="contact.html">Contact me</a></li>
+            </div>
+    </nav>
+
+
+    <!-- PROJECT CONTAINER -->
+
+    <div class="projects-container">
+        <h1>My Projects</h1>
+        <div class="projects">
+            <div class="project" data-aos="zoom-in-left">
+                <img src="./img/question_mark_PNG52.png" alt="Project 1">
+                <h2>REVEAL SOON!</h2>
+                <p>A responsive web application built with React and Node.js that allows users to track their tasks and
+                    manage their time efficiently. Revealing soon! Hang on tight.</p>
+                <div class="view-section">
+                    <button class="live-view"><a href="#">View live</a></button>
+                    <button><a href="https://github.com//project1" target="_blank" rel="noopener">View on
+                            GitHub</a></button>
+                </div>
+            </div>
+            <div class="project" data-aos="zoom-in-right">
+                <img src="./img/e-Commerce-Development.jpg" alt="Project 2">
+                <h2>PORTFOLIO</h2>
+                <p>An PORTFOLIO website developed using HTML, CSS, and JavaScript, featuring a user-friendly interface
+                    and showcasing various projects and skills.</p>
+                <div class="view-section">
+                    <button class="live-view"><a href="https://my-portfolio-viveks.netlify.app">View live</a></button>
+                    <button><a href="https://github.com/vivek3931/Portfolio" target="_blank" rel="noopener">View on
+                            GitHub</a></button>
+                </div>
+            </div>
+            <div class="project" data-aos="zoom-in-left">
+                <img src="./img/note_tic-tac-toe.jpeg" alt="Project 3">
+                <h2>TIC-TAC-TOE</h2>
+                <p>A mobile and desktop games created with HTML, CSS, and JavaScript that offers users a fun and
+                    interactive gaming.
+                    Play now and enjoy! Feel free to share your feedback.
+                </p>
+                <div class="view-section">
+                    <button class="live-view"><a href="https://game-for-fun.netlify.app">View live</a></button>
+                    <button><a href="https://github.com/vivek3931/Games" target="_blank" rel="noopener">View on
+                            GitHub</a></button>
+                </div>
+            </div>
+            <div class="project" data-aos="zoom-in-right">
+                <img src="./img/calculator.png" alt="Project 4">
+                <h2>CALCULATOR</h2>
+                <p>A mobile app created with React Native that helps users for making everyday calculations easy,do all
+                    your calculations in one place.Let's continue to calculate! </p>
+                <div class="view-section">
+                    <button class="live-view"><a href="https://mathproblemsolve.netlify.app">View live</a></button>
+                    <button><a href="https://github.com/vivek3931/CALCULATOR" target="_blank" rel="noopener">View on
+                            GitHub</a></button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            offset: 100,
+            duration: 1000
+        });
+    </script>
+</body>
+
+</html>

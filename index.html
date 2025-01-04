@@ -7,12 +7,8 @@
     <title>Vivek's Portfolio</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-
-    <!-- <link rel="preconnect" href="https://fonts.googleapis.com"> -->
-    <!-- <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet">
 </head>
 
@@ -27,14 +23,17 @@
                 <ul>
                     <li><a class="active" href="index.html">Home</a></li>
                     <li><a href="about.html">About</a></li>
-                    <li><a href="#">Services</a></li>
-                    <li><a href="#">Projects</a></li>
+                    <li><a href="service.html">Services</a></li>
+                    <li><a href="project.html">Projects</a></li>
                     <li><a href="contact.html">Contact me</a></li>
                 </ul>
             </div>
             <div class="datetime">
                 <span class="date"></span>
                 <span class="time"></span>
+                <!-- <div class="bodybackgroundchange">
+                    <button id="change-bg-btn" class="change-bg-btn">🔄</button>
+                </div> -->
             </div>
             <div id="menu-bar" class="menu-bar">
                 <i class="fa-solid fa-bars"></i>
@@ -56,33 +55,46 @@
                 <ul>
                     <li><a class="active" href="index.html">Home</a></li>
                     <li><a href="about.html">About</a></li>
-                    <li><a href="#">Services</a></li>
-                    <li><a href="#">Projects</a></li>
+                    <li><a href="service.html">Services</a></li>
+                    <li><a href="project.html">Projects</a></li>
                     <li><a href="contact.html">Contact me</a></li>
+                </ul>
+                <!-- <div class="bodybackgroundchange">
+                    <button id="change-bg-btn" class="change-bg-btn">🔄</button>
+                </div> -->
+                
             </div>
     </nav>
 
-    <section class="introsection">
-        <div class="intro" data-aos="zoom-in-right">
-            <h3>Hello, It's Me</h3>
-            <h1>Vivek Singh</h1>
-            <h3>And I'm a<span class="webtext"> Web Developer</span></h3>
-            <p>I am a web developer specializing in creating dynamic, responsive websites that provide a seamless user
-                experience. With a strong foundation in both front-end and back-end technologies, I am dedicated to
-                building clean, efficient code that brings ideas to life. </p>
-            <div class="socialmedia">
-                <a href="https://www.instagram.com/?hl=en"><i class="fa-brands fa-instagram"></i></a>
-                <a href="#"><i class="fa-brands fa-facebook"></i></a>
-                <a href="#"><i class="fa-brands fa-twitter"></i></a>
-                <a href="https://www.linkedin.com/feed/"><i class="fa-brands fa-linkedin"></i></a>
-            </div>
-            <a href="Vivek_resume.pdf" download><button class="button">Download CV</button></a>
-        </div>
-        <div class="introimg" data-aos="zoom-in-left">
-            <img src="./img/webdeveloper_img.png" alt="profilephoto">
-        </div>
+    <!-- CARD - CONTAINER -->
 
-    </section>
+    <div class="introsection">
+        <div class="card" data-aos="zoom-in">
+            <div class="about-image">
+                <img src="./img/webdeveloper_img.png" alt="John Doe">
+            </div>
+            <div class="about">
+                <h3>Hello, It's Me</h3>
+                <h1>Vivek Singh</h1>
+                <h3>And I'm a<span class="webtext"> Web Developer</span></h3>
+                <p>I am a web developer specializing in creating dynamic, responsive websites that provide a
+                    seamless
+                    user
+                    experience. With a strong foundation in both front-end and back-end technologies, I am dedicated
+                    to
+                    building clean, efficient code that brings ideas to life. </p>
+                <div class="socialmedia">
+                    <a href="https://www.instagram.com/?hl=en"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="https://www.linkedin.com/feed/"><i class="fa-brands fa-linkedin"></i></a>
+                </div>
+                <a href="Vivek_resume.pdf" download><button class="button">Download CV</button></a>
+            </div>
+        </div>
+    </div>
+
+    
 
     <script src="script.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
