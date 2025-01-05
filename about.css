@@ -272,7 +272,9 @@ nav ul li a.active {
     .side-nav {
         z-index: 1;
     }
-
+    .datetime{
+        margin-right: 1rem;
+    }
     .date,
     .time {
         font-size: 0.7rem;
@@ -287,7 +289,6 @@ nav ul li a.active {
 
     p {
         font-size: 0.7rem;
-        margin-bottom: 10px;
     }
 
     .socialmedia {
