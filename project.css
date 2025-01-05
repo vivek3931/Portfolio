@@ -252,7 +252,9 @@ button:hover {
     .side-nav {
         z-index: 1;
     }
-
+    .datetime{
+        margin-right: 1rem
+    }
     .date,
     .time {
         font-size: 0.7rem;
