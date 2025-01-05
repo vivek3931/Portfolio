@@ -10,7 +10,7 @@
 body {
     background-image: url(./img/purple_bg2.jpg);
     object-fit: cover;
-    
+
 }
 
 .nav {
@@ -143,6 +143,7 @@ nav ul li a:hover::after,
 .active::after {
     transform: scaleX(1);
 }
+
 .change-bg-btn {
     position: fixed;
     bottom: 20px;
@@ -174,7 +175,7 @@ nav ul li a.active {
 
 
 .introsection {
-    padding : 120px 20px 20px 20px;
+    padding: 120px 20px 20px 20px;
     width: auto;
     display: flex;
     justify-content: center;
@@ -417,11 +418,12 @@ nav ul li a.active {
 }
 
 @media(min-width: 768px) and (max-width: 1023.98px) {
-    .change-bg-btn{
+    .change-bg-btn {
         display: none;
     }
-    .introsection{
-        padding-top:20px
+
+    .introsection {
+        padding-top: 20px
     }
 
     .img {
@@ -476,7 +478,7 @@ nav ul li a.active {
 }
 
 @media(min-width: 1023px) {
-    .change-bg-btn{
+    .change-bg-btn {
         display: none;
     }
 
