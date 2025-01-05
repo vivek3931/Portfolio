@@ -9,11 +9,8 @@
 
 body {
     background-image: url(./img/purple_bg2.jpg);
-    background-size: cover;
-    /* background-color: rgba(121, 38, 209, 0.749); */
-    background-color: #101010;
-
-    /* background:  linear-gradient(90deg, rgba(171, 18, 226, 1) 39%, rgba(9, 49, 121, 1) 78%); */
+    object-fit: cover;
+    
 }
 
 .nav {
@@ -182,7 +179,10 @@ nav ul li a.active {
 
 
 .introsection {
-    padding-top: 120px;
+    padding : 120px 20px 20px 20px;
+    /* padding-top: 120px;
+    padding-left: 20px;
+    padding-right: 20px; */
     /* height: 100vh; */
     width: auto;
     display: flex;
@@ -199,7 +199,7 @@ nav ul li a.active {
     padding: 2rem;
     height: auto;
     background: linear-gradient(90deg, rgba(171, 18, 226, 1) 39%, rgba(9, 49, 121, 1) 78%);
-    width: 90%;
+    width: auto;
     margin: 0 auto;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
@@ -347,7 +347,7 @@ nav ul li a.active {
     box-shadow: 0 0 1rem rgba(238, 130, 238, 0.373);
 }
 
-@media(max-width: 768px) {
+@media(max-width: 767.98px) {
 
     .navcontent {
         display: none;
@@ -384,6 +384,7 @@ nav ul li a.active {
     }
 
     .card {
+        width: auto;
         flex-direction: column;
     }
 
@@ -424,21 +425,20 @@ nav ul li a.active {
     }
 
     .introsection {
-        padding: 0;
-        height: 100vh;
+        margin: 0;
+        padding: 20px;
         justify-content: center;
         align-items: center;
 
     }
 }
 
-@media(min-width: 768px) and (max-width: 1023px) {
+@media(min-width: 768px) and (max-width: 1023.98px) {
     .change-bg-btn{
         display: none;
     }
-    .introsection {
-        padding: 0;
-        height: 130vh;
+    .introsection{
+        padding-top:20px
     }
 
     .img {
