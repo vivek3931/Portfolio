@@ -58,14 +58,12 @@ body {
 
 .navlogo img {
     height: 70px;
-    /* box-shadow: 5px 10px 20px black; */
 }
 
 .nav ul li {
     padding: 14px 20px;
     cursor: pointer;
     list-style-type: none;
-    /* position: relative; */
 
 }
 
@@ -96,7 +94,6 @@ body {
     height: 50px;
     width: 50px;
     border-radius: 10%;
-    /* margin-right: 1rem; */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -122,7 +119,6 @@ body {
 }
 
 nav ul li a {
-    /* color: #101010; */
     color: #7F8188;
     transition: 0.3s;
     font-size: 1rem;
@@ -148,7 +144,6 @@ nav ul li a::after {
 nav ul li a:hover::after,
 .active::after {
     transform: scaleX(1);
-    /* background-color: #7F8188; */
 }
 
 
@@ -200,7 +195,6 @@ nav ul li a.active {
     background: linear-gradient(0deg, rgba(37, 188, 228, 1) 0%, rgba(207, 11, 228, 1) 100%);
     background-clip: text;
     -webkit-text-fill-color: transparent;
-    /* color: #d563ff; */
     margin-bottom: 20px;
 }
 
@@ -215,7 +209,6 @@ nav ul li a.active {
 .service p {
     font-size: 1rem;
     color: #fff;
-    /* color: #666; */
 }
 
 @media(max-width: 768px) {
