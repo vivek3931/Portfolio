@@ -339,6 +339,9 @@ nav ul li a.active {
     .nav {
         justify-content: space-between;
     }
+    .datetime{
+        margin-right: 1rem;
+    }
     .date,
     .time {
         font-size: 0.7rem;
