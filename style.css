@@ -18,6 +18,7 @@ body {
     justify-content: space-evenly;
     align-items: center;
     height: 70px;
+    backdrop-filter: blur(5px);
 }
 
 .navcontent {
@@ -25,11 +26,9 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    /* z-index: 1; */
 }
 
 .datetime {
-    font-size: 1.2rem;
     letter-spacing: 0.1rem;
 }
 
@@ -340,7 +339,6 @@ nav ul li a.active {
     .nav {
         justify-content: space-between;
     }
-
     .date,
     .time {
         font-size: 0.7rem;
