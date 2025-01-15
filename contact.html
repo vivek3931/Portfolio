@@ -70,10 +70,10 @@
     <div class="contact-form-container">
         <div class="contact-form" data-aos="zoom-out">
             <h1>Contact Us</h1>
-            <form>
-                <input id="name" type="text"  placeholder="Your Name" required>
-                <input id="email" type="email" placeholder="Your Email" required>
-                <textarea id="message" rows="5" placeholder="Your Message" required></textarea>
+            <form name="submit-to-google-sheet">
+                <input id="name" type="text" name="Name" placeholder="Your Name" required>
+                <input id="email" type="email" name="Email" placeholder="Your Email" required>
+                <textarea id="message" name="Message" rows="5" placeholder="Your Message" required></textarea>
                 <button id="submit" type="submit">Send Message</button>
             </form>
         </div>
@@ -87,6 +87,7 @@
             duration: 1000
         });
     </script>
+    
 </body>
 
 </html>
