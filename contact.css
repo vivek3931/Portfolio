@@ -1,10 +1,10 @@
-*{
+* {
 
     margin: 0;
     padding: 0;
     list-style-type: none;
     text-decoration: none;
-    font-family: Poppins , Verdana, Geneva, Tahoma, sans-serif;
+    font-family: Poppins, Verdana, Geneva, Tahoma, sans-serif;
 }
 
 body {
@@ -162,6 +162,7 @@ nav ul li a.active {
 }
 
 .contact-form {
+    border: 1px solid gold;
     background: linear-gradient(90deg, rgba(171, 18, 226, 1) 39%, rgba(9, 49, 121, 1) 78%);
     padding: 30px;
     border-radius: 10%;
@@ -204,7 +205,8 @@ form {
     font-size: 16px;
     transition: background-color 0.3s ease-in-out;
 }
-.contact-form button:hover{
+
+.contact-form button:hover {
     background-color: transparent;
     border: 1px solid white;
 }
@@ -217,12 +219,15 @@ form {
     .nav {
         justify-content: space-between;
     }
+
     .side-nav {
         z-index: 1;
     }
-    .datetime{
+
+    .datetime {
         margin-right: 1rem;
     }
+
     .date,
     .time {
         font-size: 0.7rem;
@@ -232,6 +237,7 @@ form {
     }
 
 }
+
 @media(min-width: 768px) and (max-width: 1024px) {
     .navcontent {
         display: none;

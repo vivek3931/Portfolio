@@ -184,14 +184,14 @@ nav ul li a.active {
     display: flex;
     flex-direction: row-reverse;
     flex-wrap: wrap;
-    border: 1px solid gold;
     border-radius: 8px;
     padding: 2rem;
     height: auto;
     background: linear-gradient(90deg, rgba(171, 18, 226, 1) 39%, rgba(9, 49, 121, 1) 78%);
+    border:1px solid gold ;
     width: auto;
     margin: 0 auto;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    
 }
 
 .about {
@@ -327,7 +327,7 @@ nav ul li a.active {
     background-color: transparent;
     border: 1px solid white;
     color: #fff;
-    box-shadow: 0 0 1rem rgba(238, 130, 238, 0.373);
+    box-shadow: 0 0 1rem rgba(130, 200, 238, 0.373);
 }
 
 @media(max-width: 767.98px) {
@@ -339,9 +339,11 @@ nav ul li a.active {
     .nav {
         justify-content: space-between;
     }
-    .datetime{
+
+    .datetime {
         margin-right: 1rem;
     }
+
     .date,
     .time {
         font-size: 0.7rem;

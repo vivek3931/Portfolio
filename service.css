@@ -169,7 +169,7 @@ nav ul li a.active {
     background-image: url(./img/golden_bg.jpg);
     background-clip: text;
     -webkit-text-fill-color: transparent;
-    font-size: 3rem;
+    font-size: 2.5rem;
     margin-bottom: 40px;
 }
 
@@ -181,7 +181,7 @@ nav ul li a.active {
 }
 
 .service {
-    background: white;
+    border: 1px solid gold;
     border-radius: 10px;
     background: linear-gradient(90deg, rgba(171, 18, 226, 1) 39%, rgba(9, 49, 121, 1) 78%);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -211,7 +211,43 @@ nav ul li a.active {
     font-size: 1rem;
     color: #fff;
 }
+.back-to-top-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    margin-bottom: 10px;
+}
 
+.back-to-top {
+    border: 1px solid gold;
+    border-radius: 5px;
+    background-color: transparent;
+    height: 40px;
+    width: 100px;
+
+}
+
+.back-to-top p {
+    background-image: url(./img/golden_bg.jpg);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 0.7rem;
+    animation: blink 1.5s infinite;
+}
+@keyframes blink {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
 @media(max-width: 768px) {
     .navcontent {
         display: none;
@@ -261,6 +297,9 @@ nav ul li a.active {
     }
 
     .menu-bar {
+        display: none;
+    }
+    .back-to-top-container{
         display: none;
     }
 }

@@ -27,32 +27,47 @@ menu.forEach(element => {
     })
 });
 
-let backgroundchange = document.querySelector('.background-change');
 
-document.getElementById('change-bg-btn').addEventListener('click', () => {
-    const body = document.body;
-    const images = [
-        'url("assets/bg2.jpg")',
-        'url("./img/purple_bg2.jpg")',
-        'url("assets/bg3.jpg")'
-    ];
-    const currentImage = body.style.backgroundImage;
-    let nextImage = images[0];
+let scrollTop = document.querySelector('.back-to-top');
 
-    if (currentImage) {
-        const currentIndex = images.indexOf(currentImage);
-        nextImage = images[(currentIndex + 1) % images.length];
+if (scrollTop) {
+    scrollTop.addEventListener('click', function () {
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        })
+    })
+}
+
+
+
+let submitBtn = document.querySelector("#submit");
+
+
+submitBtn.addEventListener("click", function (event) {
+    event.preventDefault();
+    let name = document.querySelector("#name").value;
+    let email = document.querySelector("#email").value;
+    let message = document.querySelector("#message").value;
+    if (name === "" || email === "" || message === "") {
+        alert("Please fill the required input to proceed");
+    } else {
+        if (validateEmail(email) && Name(name)) {
+            window.location.href = "successfull.html";
+        } else {
+            alert("Please enter a valid details to continue");
+        }
     }
-
-    body.style.backgroundImage = nextImage;
-    body.style.backgroundSize = 'cover';
-    body.style.backgroundPosition = 'center';
 });
 
-
-let button = document.querySelector('.change-bg-btn');
-
-button.addEventListener('click', () => {
-    button.innerText = rotateButton
-    rotateButton.style.transform = 'rotate(180deg)';
-})
+function validateEmail(email) {
+    const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return re.test(String(email).toLowerCase());
+}
+function Name(name) {
+    if (name === "") {
+        alert("name should not be empty");
+        return false;
+    }
+    return true;
+}

@@ -182,6 +182,7 @@ nav ul li a.active {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     padding: 20px;
     width: 300px;
+    border: 1px solid gold;
     text-align: center;
 }
 
@@ -241,6 +242,44 @@ button:hover {
     color: white;
 }
 
+.back-to-top-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.back-to-top {
+    border: 1px solid gold;
+    background-color: transparent;
+    height: 40px;
+    width: 100px;
+
+}
+
+.back-to-top p {
+    background-image: url(./img/golden_bg.jpg);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 0.7rem;
+    animation: blink 1.5s infinite;
+}
+
+@keyframes blink {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
 @media(max-width: 768px) {
     .navcontent {
         display: none;
@@ -253,9 +292,11 @@ button:hover {
     .side-nav {
         z-index: 1;
     }
-    .datetime{
+
+    .datetime {
         margin-right: 1rem
     }
+
     .date,
     .time {
         font-size: 0.7rem;
@@ -286,6 +327,9 @@ button:hover {
     }
 
     .menu-bar {
+        display: none;
+    }
+    .back-to-top-container{
         display: none;
     }
 }
