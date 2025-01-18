@@ -191,6 +191,7 @@ nav ul li a.active {
     width: 100%;
     border-radius: 10px;
     margin-bottom: 20px;
+    object-fit: cover;
 }
 
 .project h2 {
