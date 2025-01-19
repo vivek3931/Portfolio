@@ -1,5 +1,16 @@
+var loader = document.querySelector(".loading-container");
 let date = document.querySelector(".date")
 let time = document.querySelector(".time")
+
+window.addEventListener("load", function () {
+    loader.style.display = "none";
+    loader.remove();
+
+    AOS.init({
+        offset: 100,
+        duration: 1000
+    });
+})
 
 let clock = () => {
     const now = new Date();
@@ -40,34 +51,14 @@ if (scrollTop) {
 }
 
 
+const scriptURL = 'https://script.google.com/macros/s/AKfycbwKdSdL5jHHfnaCCmxo_7sMG_lBunpUFnJLTFrFv4lipvjCBUO2yPbbgy8uSEy39wOLQA/exec'
+const form = document.forms['submit-to-google-sheet']
 
-let submitBtn = document.querySelector("#submit");
-
-
-submitBtn.addEventListener("click", function (event) {
-    event.preventDefault();
-    let name = document.querySelector("#name").value;
-    let email = document.querySelector("#email").value;
-    let message = document.querySelector("#message").value;
-    if (name === "" || email === "" || message === "") {
-        alert("Please fill the required input to proceed");
-    } else {
-        if (validateEmail(email) && Name(name)) {
-            window.location.href = "successfull.html";
-        } else {
-            alert("Please enter a valid details to continue");
-        }
-    }
-});
-
-function validateEmail(email) {
-    const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    return re.test(String(email).toLowerCase());
-}
-function Name(name) {
-    if (name === "") {
-        alert("name should not be empty");
-        return false;
-    }
-    return true;
-}
+form.addEventListener('submit', e => {
+    e.preventDefault()
+    fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+        .then(response => {
+            window.location.href = "successfull.html"
+        })
+        .catch(error => console.error('Error!', error.message))
+})

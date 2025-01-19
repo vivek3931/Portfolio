@@ -15,6 +15,8 @@
 </head>
 
 <body>
+    <div class="loading-container"></div>
+
 
     <!-- NAV-BAR SECTION -->
 
@@ -67,27 +69,18 @@
     <!-- CONTACT-FROM CONTAINER -->
 
 
-    <div class="contact-form-container">
-        <div class="contact-form" data-aos="zoom-out">
-            <h1>Contact Us</h1>
-            <form name="submit-to-google-sheet">
-                <input id="name" type="text" name="Name" placeholder="Your Name" required>
-                <input id="email" type="email" name="Email" placeholder="Your Email" required>
-                <textarea id="message" name="Message" rows="5" placeholder="Your Message" required></textarea>
-                <button id="submit" type="submit">Send Message</button>
-            </form>
-        </div>
+    <div class="contact-form" data-aos="zoom-out">
+        <h1>Contact Us</h1>
+        <form name="submit-to-google-sheet">
+            <input id="name" type="text" name="Name" placeholder="Your Name" required>
+            <input id="email" type="email" name="Email" placeholder="Your Email" required>
+            <textarea id="message" name="Message" rows="5" placeholder="Your Message" required></textarea>
+            <button id="submit" type="submit">Send Message</button>
+        </form>
     </div>
-    <div class="animation-container"></div>
     <script src="script.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-        AOS.init({
-            offset: 100,
-            duration: 1000
-        });
-    </script>
-    
+
 </body>
 
 </html>

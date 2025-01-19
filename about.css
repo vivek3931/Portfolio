@@ -12,15 +12,6 @@ body {
     object-fit: cover;
 }
 
-.about-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 100px 60px 40px 60px;
-    border: 1px solid gold;
-
-}
-
 h1 {
     font-size: 3rem;
     background-image: url(./img/golden_bg.jpg);
@@ -46,6 +37,9 @@ p {
     background: linear-gradient(90deg, rgba(171, 18, 226, 1) 39%, rgba(9, 49, 121, 1) 78%);
     border-radius: 30px;
     padding: 20px;
+    border: 1px solid gold;
+    width: 90%;
+    margin: 100px auto 50px;
 
 
 }
@@ -263,6 +257,7 @@ nav ul li a.active {
     }
 
     .about {
+        margin: 40px auto 20px;
         height: auto;
         border-radius: 30px;
     }
@@ -274,9 +269,11 @@ nav ul li a.active {
     .side-nav {
         z-index: 1;
     }
-    .datetime{
+
+    .datetime {
         margin-right: 1rem;
     }
+
     .date,
     .time {
         font-size: 0.7rem;
@@ -337,4 +334,14 @@ nav ul li a.active {
     .menu-bar {
         display: none;
     }
+}
+
+.loading-container {
+    height: 100vh;
+    width: 100%;
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+    background-image: url(./img/cat-spinner.gif);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 15%;
 }

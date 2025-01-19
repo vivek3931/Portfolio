@@ -14,73 +14,77 @@
 </head>
 
 <body>
-    <div class="container" data-aos="zoom-in">
-        <div class="success-message">Form Submitted Successfully!</div>
-        <div class="details">
-            Thank you for filling out the form. We have received your submission and will get back to you shortly.
+    <!-- <div class="loading-container"></div> -->
+    <div class="successfull-container">
+        <div class="container" data-aos="zoom-in">
+            <div class="success-message">Form Submitted Successfully!</div>
+            <div class="details">
+                Thank you for filling out the form. We have received your submission and will get back to you shortly.
+            </div>
         </div>
     </div>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
-        AOS.init({
-            offset: 100,
-            duration: 1000,
-            once: true
-        });
 
-    // Create and animate firework particles
-    function createFirework() {
-        const firework = document.createElement('div');
-        firework.className = 'firework';
-        firework.style.left = Math.random() * 100 + 'vw';
-        document.body.appendChild(firework);
+        setTimeout(function timeOut() {
+            window.location.href = "index.html"
+        }, 5000);
+    </script>
+    <script>
 
-        // Purple and bluish color variations
-        const colors = ['#800080', '#9370DB', '#4169E1', '#0000CD', '#483D8B'];
-        const randomColor = colors[Math.floor(Math.random() * colors.length)];
-        firework.style.background = randomColor;
+        // Create and animate firework particles
+        function createFirework() {
+            const firework = document.createElement('div');
+            firework.className = 'firework';
+            firework.style.left = Math.random() * 100 + 'vw';
+            document.body.appendChild(firework);
 
-        setTimeout(() => {
-            firework.classList.add('explode');
-            // Create explosion effect when reaching top
-            for(let i = 0; i < 25; i++) {
-                createExplosionParticle(firework.offsetLeft, 100, randomColor);
-            }
-            setTimeout(() => firework.remove(), 1500);
-        }, 1000);
-    }
+            // Purple and bluish color variations
+            const colors = ['#800080', '#9370DB', '#4169E1', '#0000CD', '#483D8B'];
+            const randomColor = colors[Math.floor(Math.random() * colors.length)];
+            firework.style.background = randomColor;
 
-    function createExplosionParticle(x, y, color) {
-        const particle = document.createElement('div');
-        particle.className = 'particle';
-        particle.style.left = x + 'px';
-        particle.style.top = y + 'px';
-        particle.style.background = color;
-        document.body.appendChild(particle);
-        
-        const angle = Math.random() * Math.PI * 2;
-        const distance = Math.random() * 200 + 50;
-        particle.style.setProperty('--x', Math.cos(angle) * distance + 'px');
-        particle.style.setProperty('--y', Math.sin(angle) * distance + 'px');
-        
-        setTimeout(() => particle.remove(), 1500);
-    }
+            setTimeout(() => {
+                firework.classList.add('explode');
+                // Create explosion effect when reaching top
+                for (let i = 0; i < 25; i++) {
+                    createExplosionParticle(firework.offsetLeft, 100, randomColor);
+                }
+                setTimeout(() => firework.remove(), 1500);
+            }, 1000);
+        }
 
-    function createSparkle() {
-        const sparkle = document.createElement('div');
-        sparkle.className = 'sparkle';
-        sparkle.style.background = '#4169E1';
-        const target = document.querySelector('.success-message');
-        target.appendChild(sparkle);
-        
-        setTimeout(() => sparkle.remove(), 1000);
-    }
+        function createExplosionParticle(x, y, color) {
+            const particle = document.createElement('div');
+            particle.className = 'particle';
+            particle.style.left = x + 'px';
+            particle.style.top = y + 'px';
+            particle.style.background = color;
+            document.body.appendChild(particle);
 
-    setInterval(createFirework, 2000);
-    setInterval(createSparkle, 300);
+            const angle = Math.random() * Math.PI * 2;
+            const distance = Math.random() * 200 + 50;
+            particle.style.setProperty('--x', Math.cos(angle) * distance + 'px');
+            particle.style.setProperty('--y', Math.sin(angle) * distance + 'px');
 
-    const style = document.createElement('style');
-    style.textContent = `
+            setTimeout(() => particle.remove(), 1500);
+        }
+
+        function createSparkle() {
+            const sparkle = document.createElement('div');
+            sparkle.className = 'sparkle';
+            sparkle.style.background = '#4169E1';
+            const target = document.querySelector('.success-message');
+            target.appendChild(sparkle);
+
+            setTimeout(() => sparkle.remove(), 1000);
+        }
+
+        setInterval(createFirework, 2000);
+        setInterval(createSparkle, 300);
+
+        const style = document.createElement('style');
+        style.textContent = `
         body {
             background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
             overflow: hidden;
@@ -175,8 +179,8 @@
             0% { opacity: 1; }
             100% { opacity: 0; }
         }
-    `;
-    document.head.appendChild(style);
+    `
+        document.head.appendChild(style);
     </script>
 </body>
 
