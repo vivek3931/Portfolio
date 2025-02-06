@@ -37,7 +37,7 @@ Edit
 
 ## 🚀 Live Demo
 
-🔗 [Check it out here](https://my-portfolio-viveks.netlify.app/) 
+🔗 [Check it out here](https://viveks-profile.netlify.app/) 
 
 ## 📬 Contact
 
