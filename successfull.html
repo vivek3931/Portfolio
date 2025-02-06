@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Form Submission Successful</title>
+    <link rel="shortcut icon" href="./img/favicon-32x32.png">
     <link rel="stylesheet" href="successfull.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
@@ -14,24 +15,16 @@
 </head>
 
 <body>
-    <!-- <div class="loading-container"></div> -->
-    <div class="successfull-container">
-        <div class="container" data-aos="zoom-in">
-            <div class="success-message">Form Submitted Successfully!</div>
-            <div class="details">
-                Thank you for filling out the form. We have received your submission and will get back to you shortly.
-            </div>
+    <div class="container">
+        <div class="success-message">Form Submitted Successfully!</div>
+        <div class="details">
+            Thank you for filling out the form. We have received your submission and will get back to you shortly.
         </div>
     </div>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+    <script src="script.js"></script>
     <script>
-
-        setTimeout(function timeOut() {
-            window.location.href = "index.html"
-        }, 5000);
-    </script>
-    <script>
-
+        
         // Create and animate firework particles
         function createFirework() {
             const firework = document.createElement('div');
@@ -43,7 +36,7 @@
             const colors = ['#800080', '#9370DB', '#4169E1', '#0000CD', '#483D8B'];
             const randomColor = colors[Math.floor(Math.random() * colors.length)];
             firework.style.background = randomColor;
-
+            
             setTimeout(() => {
                 firework.classList.add('explode');
                 // Create explosion effect when reaching top
@@ -53,7 +46,7 @@
                 setTimeout(() => firework.remove(), 1500);
             }, 1000);
         }
-
+        
         function createExplosionParticle(x, y, color) {
             const particle = document.createElement('div');
             particle.className = 'particle';
@@ -61,127 +54,134 @@
             particle.style.top = y + 'px';
             particle.style.background = color;
             document.body.appendChild(particle);
-
+            
             const angle = Math.random() * Math.PI * 2;
             const distance = Math.random() * 200 + 50;
             particle.style.setProperty('--x', Math.cos(angle) * distance + 'px');
             particle.style.setProperty('--y', Math.sin(angle) * distance + 'px');
-
+            
             setTimeout(() => particle.remove(), 1500);
         }
-
+        
         function createSparkle() {
             const sparkle = document.createElement('div');
             sparkle.className = 'sparkle';
             sparkle.style.background = '#4169E1';
             const target = document.querySelector('.success-message');
             target.appendChild(sparkle);
-
+            
             setTimeout(() => sparkle.remove(), 1000);
         }
-
+        
         setInterval(createFirework, 2000);
         setInterval(createSparkle, 300);
-
+        
         const style = document.createElement('style');
         style.textContent = `
         body {
             background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
             overflow: hidden;
-        }
-        .container {
-            background: rgba(255, 255, 255, 0.1);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            border-radius: 15px;
-            padding: 20px;
-            text-align: center;
-            color: #ffffff;
-            font-family: 'Poppins', sans-serif;
-            font-size: 1.2em;
-            box-shadow: 0 0 20px rgba(65, 105, 225, 0.3),
-                        0 0 40px rgba(128, 0, 128, 0.2);
-            animation: float 6s ease-in-out infinite,
-                       glow 3s ease-in-out infinite alternate;
-
-            @keyframes float {
-                0%, 100% { transform: translateY(0); }
-                50% { transform: translateY(-20px); }
             }
-
-            @keyframes glow {
-                0% { box-shadow: 0 0 20px rgba(65, 105, 225, 0.3),
-                                 0 0 40px rgba(128, 0, 128, 0.2); }
-                100% { box-shadow: 0 0 30px rgba(65, 105, 225, 0.5),
-                                   0 0 60px rgba(128, 0, 128, 0.4); }
-            }
-            backdrop-filter: blur(10px);
-        }
-        .firework {
-            position: fixed;
-            bottom: -20px;
-            width: 4px;
-            height: 20px;
-            border-radius: 50% 50% 0 0;
-            animation: shoot 1s ease-out;
-            z-index: -1;
-        }
-
-        .firework::before {
-            content: '';
-            position: absolute;
-            top: 100%;
+            .container {
+                background: rgba(255, 255, 255, 0.1);
+                border: 1px solid rgba(255, 255, 255, 0.2);
+                border-radius: 15px;
+                padding: 20px;
+                text-align: center;
+                color: #ffffff;
+                font-family: 'Poppins', sans-serif;
+                font-size: 1.2em;
+                box-shadow: 0 0 20px rgba(65, 105, 225, 0.3),
+                0 0 40px rgba(128, 0, 128, 0.2);
+                animation: float 6s ease-in-out infinite,
+                glow 3s ease-in-out infinite alternate;
+                
+                @keyframes float {
+                    0%, 100% { transform: translateY(0); }
+                    50% { transform: translateY(-20px); }
+                    }
+                    
+                    @keyframes glow {
+                        0% { box-shadow: 0 0 20px rgba(65, 105, 225, 0.3),
+                        0 0 40px rgba(128, 0, 128, 0.2); }
+                                 100% { box-shadow: 0 0 30px rgba(65, 105, 225, 0.5),
+                                 0 0 60px rgba(128, 0, 128, 0.4); }
+                                 }
+                                 backdrop-filter: blur(10px);
+                                 }
+                                 .firework {
+                                    position: fixed;
+                                    bottom: -20px;
+                                    width: 4px;
+                                    height: 20px;
+                                    border-radius: 50% 50% 0 0;
+                                    animation: shoot 1s ease-out;
+                                    z-index: -1;
+                                    }
+                                    
+                                    .firework::before {
+                                        content: '';
+                                        position: absolute;
+                                        top: 100%;
             left: 0;
             width: 4px;
             height: 30px;
             background: inherit;
             filter: blur(2px);
             animation: trail 0.5s linear infinite;
-        }
-
-        .particle {
-            position: fixed;
-            width: 6px;
-            height: 6px;
-            border-radius: 50%;
-            animation: explode 1.5s ease-out;
-            pointer-events: none;
-            filter: blur(1px);
-        }
-
-        .sparkle {
-            position: absolute;
-            width: 4px;
-            height: 4px;
-            border-radius: 50%;
-            left: ${Math.random() * 100}%;
-            top: ${Math.random() * 100}%;
-            animation: sparkleAnim 1s linear;
-        }
-
-        @keyframes explode {
-            0% { transform: translate(0, 0) scale(1); opacity: 1; }
-            50% { transform: translate(calc(var(--x) * 0.5), calc(var(--y) * 0.5)) scale(0.8); opacity: 0.8; }
-            100% { transform: translate(var(--x), var(--y)) scale(0); opacity: 0; }
-        }
-
-        @keyframes sparkleAnim {
-            0% { transform: scale(0); opacity: 0; }
-            50% { transform: scale(1); opacity: 1; }
-            100% { transform: scale(0); opacity: 0; }
-        }
-
-        @keyframes shoot {
-            0% { transform: translateY(0) scale(1); }
-            100% { transform: translateY(-100vh) scale(1); }
-        }
-
-        @keyframes trail {
-            0% { opacity: 1; }
-            100% { opacity: 0; }
-        }
-    `
-        document.head.appendChild(style);
-    </script>
+            }
+            
+            .particle {
+                position: fixed;
+                width: 6px;
+                height: 6px;
+                border-radius: 50%;
+                animation: explode 1.5s ease-out;
+                pointer-events: none;
+                filter: blur(1px);
+                }
+                
+                .sparkle {
+                    position: absolute;
+                    width: 4px;
+                    height: 4px;
+                    border-radius: 50%;
+                    left: ${Math.random() * 100}%;
+                    top: ${Math.random() * 100}%;
+                    animation: sparkleAnim 1s linear;
+                    }
+                    
+                    @keyframes explode {
+                        0% { transform: translate(0, 0) scale(1); opacity: 1; }
+                        50% { transform: translate(calc(var(--x) * 0.5), calc(var(--y) * 0.5)) scale(0.8); opacity: 0.8; }
+                        100% { transform: translate(var(--x), var(--y)) scale(0); opacity: 0; }
+                        }
+                        
+                        @keyframes sparkleAnim {
+                            0% { transform: scale(0); opacity: 0; }
+                            50% { transform: scale(1); opacity: 1; }
+                            100% { transform: scale(0); opacity: 0; }
+                            }
+                            
+                            @keyframes shoot {
+                                0% { transform: translateY(0) scale(1); }
+                                100% { transform: translateY(-100vh) scale(1); }
+                                }
+                                
+                                @keyframes trail {
+                                    0% { opacity: 1; }
+                                    100% { opacity: 0; }
+                                    }
+                                    `;
+                                    document.head.appendChild(style);
+                                    </script>
+    <script>
+        
+        setTimeout(function timeOut() {
+                window.location.href = "index.html"
+            }, 5000);
+            // </script>
+            <!-- <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> -->
 </body>
 
 </html>

@@ -34,7 +34,8 @@ let menu = document.querySelectorAll('.menu-bar');
 
 menu.forEach(element => {
     element.addEventListener("click", () => {
-        sidenav.classList.toggle('hidden')
+        sidenav.classList.toggle('hidden');
+
     })
 });
 
@@ -52,7 +53,7 @@ if (scrollTop) {
 
 
 const scriptURL = 'https://script.google.com/macros/s/AKfycbwKdSdL5jHHfnaCCmxo_7sMG_lBunpUFnJLTFrFv4lipvjCBUO2yPbbgy8uSEy39wOLQA/exec'
-const form = document.forms['submit-to-google-sheet']
+const form = document.forms['submit-to-google-sheet'];
 
 form.addEventListener('submit', e => {
     e.preventDefault()
@@ -62,3 +63,19 @@ form.addEventListener('submit', e => {
         })
         .catch(error => console.error('Error!', error.message))
 })
+window.onload = function () {
+    setTimeout(function () {
+        document.getElementById('overlay').style.display = 'block';
+        document.getElementById('feedback').style.display = 'block';
+    }, 3500);
+}
+
+function closePopup() {
+    document.getElementById('overlay').style.display = 'none';
+    document.getElementById('feedback').style.display = 'none';
+}
+document.getElementById('feedback').onsubmit = function (e) {
+    e.preventDefault();
+    alert('Thank you for your feedback!');
+    closePopup();
+}
