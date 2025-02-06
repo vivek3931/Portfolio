@@ -37,12 +37,12 @@ Edit
 
 ## 🚀 Live Demo
 
-🔗 [Check it out here](my-portfolio-viveks.netlify.app) 
+🔗 [Check it out here](https://my-portfolio-viveks.netlify.app/) 
 
 ## 📬 Contact
 
 📧 Email: viveks3931@gmail.com  
-🔗 [LinkedIn](#) | [GitHub](github.com/vivek3931) 
+🔗 [LinkedIn](#) | [GitHub](https://github.com/vivek3931) 
 
 ---
 
