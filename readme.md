@@ -42,7 +42,7 @@ Edit
 ## 📬 Contact
 
 📧 Email: viveks3931@gmail.com  
-🔗 [LinkedIn](vivek3931) | [GitHub](https://github.com/vivek3931) 
+🔗 [LinkedIn](https://www.linkedin.com/in/vivek3931/) | [GitHub](https://github.com/vivek3931) 
 
 ---
 
